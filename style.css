@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: hsl(36, 100%, 99%);
+}
+
+main {
+    display: grid;
+    width: 90%;
+    justify-items: center;
+    margin: auto;
+    gap: 2rem;
+}
+
+#blocks {
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    align-items: center;
+}
+
+section img {
+    width: 10%;
+}
+
+.img-container {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.img-container img {
+    width: 100px;
+    margin-right: 1rem;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin: .5rem 1rem .5rem 0;
+}
+
+#new {
+    background-color: hsl(240, 100%, 5%);
+    padding: 1rem;
+    margin: 3rem 0;
+}
+
+p {
+    color: hsl(236, 13%, 42%);
+}
+
+h2 {
+    color: hsl(35, 77%, 62%);
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    color: hsl(36, 100%, 99%);
+    margin-bottom: 0.5rem;
+}
+
+h3:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+h4 {
+    color: hsl(233, 8%, 79%);
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h5:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+hr {
+    border-color: hsl(236, 13%, 42%);
+    margin: 2rem 0;
+}
+
+button {
+    margin-top: 1rem;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    padding: 1rem 2rem;
+    letter-spacing: 5px;
+    border: none;
+}
+
+button:hover {
+    background-color: hsl(240, 100%, 5%);
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    #menu {
+        display: block;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav {
+        display: grid;
+        position: fixed;
+        background-color: hsl(36, 100%, 99%);
+        height: 100vh;
+        top: 0;
+        width: 70vw;
+        right: 0;
+        padding: 20vh 0 50vh 1rem;
+        max-width: 400px;
+    }
+
+    .nav-container {
+        background-color: rgba(0, 0, 0, 0.4);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #container {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        max-width: 1150px;
+    }
+
+    #container > * {
+        margin: 0;
+    }
+
+    section {
+        grid-column: span 3;
+        padding-bottom: 0.5rem;
+    }
+
+    section img {
+        width: 50px;
+    }
+
+    #blocks {
+        grid-column: span 2;
+    }
+
+    #new {
+        grid-row: 2 / 4;
+        grid-column: 3;
+    }
+
+    a {
+        margin-left: 2rem;
+        color: hsl(236, 13%, 42%);
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        width: 99%;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+        letter-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-weight: 700;
+    }
+}
